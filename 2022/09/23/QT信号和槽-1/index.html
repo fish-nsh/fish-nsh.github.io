@@ -412,7 +412,9 @@
 <pre><code>a、将对应的信号或者槽函数，使用static_cast进行强制类型转换：
 语法格式： static_cast &lt;type-id&gt;( expression )
 b、使用函数指针形式来实现；
-例如，使用connect函数关联timer始终的timeout() 函数和MainWindow窗口的update() 槽函数void (MainWindow::*update_01)()=&amp;QMainWindow::update;connect(&amp;timer,&amp;QTimer::timeout,&amp;MainWindow,update_01);
+例如，使用connect函数关联timer始终的timeout() 函数和MainWindow窗口的update() 槽函数
+void (MainWindow::*update_01)()=&amp;QMainWindow::update;
+connect(&amp;timer,&amp;QTimer::timeout,&amp;MainWindow,update_01);
 </code></pre>
 <p>但是重载看起来的有些繁琐，不知道优点是什么</p>
 
