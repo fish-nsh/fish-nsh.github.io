@@ -5,13 +5,12 @@
 <head>
     <meta charset="utf-8">
     <meta name="keywords" content="JAVA多线程, 鱼干小站">
-    <meta name="description" content="Java多线程
-1.进程和线程
+    <meta name="description" content="Java多线程1.进程和线程
 进程是:一个应用程序（1个进程是一个软件）。
 线程是：一个进程中的执行场景/执行单元。
 注意：一个进程可以启动多个线程。
 例如一个java程序中的main函数就是一个程序的主线程，
-因此现在的一个java程序">
+因此现在的一个java程序至">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -402,16 +401,20 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>Java多线程</p>
-<p>1.进程和线程</p>
+                <h3 id="Java多线程"><a href="#Java多线程" class="headerlink" title="Java多线程"></a>Java多线程</h3><p><strong>1.进程和线程</strong></p>
 <pre><code>进程是:一个应用程序（1个进程是一个软件）。
 线程是：一个进程中的执行场景/执行单元。
 注意：一个进程可以启动多个线程。
 例如一个java程序中的main函数就是一个程序的主线程，
 因此现在的一个java程序至少包含两个线程。
 </code></pre>
-<p>   进程和进程之间是独立的，不共享资源。<br>   线程A和线程B，堆内存 和 方法区 内存共享。但是 栈内存 独立，一个线程一个栈。<br>2.
- </p>
+<p>   进程和进程之间是独立的，不共享资源。</p>
+<p>   线程A和线程B，堆内存 和 方法区 内存共享。但是 栈内存 独立，一个线程一个栈。</p>
+<p>   因此可以通过多线程并发来提高效率。</p>
+<p>*使用了多线程机制之后，main方法结束，是不是有可能程序也不会结束？</p>
+<p><strong>2.真正的多线程并发</strong><br> 　　t1线程执行t1的。<br> 　　t2线程执行t2的。<br> 　　t1不会影响t2，t2也不会影响t1。这叫做真正的多线程并发。</p>
+<p><strong>3.线程对象的生命状态</strong><br>    1.新建状态<br>    2.就绪状态<br>    3.运行状态<br>    4.阻塞状态<br>    5.死亡状态</p>
+<p><img src="/images/%E8%BF%9B%E7%A8%8B%E4%BA%94%E7%8A%B6%E6%80%81.png" alt="进程五状态"></p>
 
                 
             </div>

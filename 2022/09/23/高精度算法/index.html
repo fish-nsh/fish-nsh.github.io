@@ -10,8 +10,8 @@
 实际上高精度就是说参与运算的数据和运算结果的范围，超出标准数据类型能表示的数据大小范围的运算。
 
 2.最简单的实现加减
-将大数分解到较短的数据进行存储和运算
-简单实现如下：#include&amp;lt;iost">
+将大数分解到较短的数据进行存储和运算    简单实现如下：
+   &amp;#96;&amp;#96">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -407,39 +407,10 @@
 <pre><code>实际上高精度就是说参与运算的数据和运算结果的范围，超出标准数据类型能表示的数据大小范围的运算。
 </code></pre>
 <p>2.最简单的实现加减</p>
-<pre><code>将大数分解到较短的数据进行存储和运算
-简单实现如下：#include&lt;iostream&gt;  
-#include&lt;cstring&gt;  
-using namespace std;  
-int main()  
-&#123;  
-   string str1,str2;  
-   int a[250],b[250],len;   //数组的大小决定了计算的高精度最大位数  
-   int i;  
-   memset(a,0,sizeof(a));  
-        memset(b,0,sizeof(b));  
-    cin&gt;&gt;str1&gt;&gt;str2;   //输入两个字符串  
-    a[0]=str1.length();  //取得第一个字符串的长度  
-    for(i=1;i&lt;=a[0];i++)  //把第一个字符串转换为整数，存放在数组a中  
-      a[i]=str1[a[0]-i]-&#39;0&#39;;  
-    b[0]=str2.length();   //取得第二个字符串长度  
-    for(i=1;i&lt;=b[0];i++)   //把第二个字符串中的每一位转换为整数，存放在数组B中  
-      b[i]=str2[b[0]-i]-&#39;0&#39;;  
-    len=(a[0]&gt;b[0]?a[0]:b[0]);   //取两个字符串最大的长度  
-    for(i=1;i&lt;=len;i++)   //做按位加法，同时处理进位  
-  &#123;  
-    a[i]+=b[i];  
-    a[i+1]+=a[i]/10;  
-    a[i]%=10;     
-  &#125;  
-  len++;    //下面是去掉最高位的0，然后输出。  
-  while((a[len]==0)&amp;&amp;(len&gt;1)) len--;  
-  for(i=len;i&gt;=1;i--)  
-    cout&lt;&lt;a[i];  
-  return 0;   
-&#125;  
-</code></pre>
-<p>&#x2F;&#x2F;注意：两个数相加，结果的位数，应该比两个数中大的那个数多一位。 </p>
+<p>将大数分解到较短的数据进行存储和运算<br>    简单实现如下：</p>
+<p>   &#96;&#96;&#96;</p>
+<p>   #include<iostream><br>      #include<cstring><br>    using namespace std;<br>    int main()<br>    {<br>       string str1,str2;<br>       int a[250],b[250],len;   &#x2F;&#x2F;数组的大小决定了计算的高精度最大位数<br>       int i;<br>       memset(a,0,sizeof(a));<br>            memset(b,0,sizeof(b));<br>        cin&gt;&gt;str1&gt;&gt;str2;   &#x2F;&#x2F;输入两个字符串<br>        a[0]&#x3D;str1.length();  &#x2F;&#x2F;取得第一个字符串的长度<br>        for(i&#x3D;1;i&lt;&#x3D;a[0];i++)  &#x2F;&#x2F;把第一个字符串转换为整数，存放在数组a中<br>          a[i]&#x3D;str1[a[0]-i]-‘0’;<br>        b[0]&#x3D;str2.length();   &#x2F;&#x2F;取得第二个字符串长度<br>        for(i&#x3D;1;i&lt;&#x3D;b[0];i++)   &#x2F;&#x2F;把第二个字符串中的每一位转换为整数，存放在数组B中<br>          b[i]&#x3D;str2[b[0]-i]-‘0’;<br>        len&#x3D;(a[0]&gt;b[0]?a[0]:b[0]);   &#x2F;&#x2F;取两个字符串最大的长度<br>        for(i&#x3D;1;i&lt;&#x3D;len;i++)   &#x2F;&#x2F;做按位加法，同时处理进位<br>      {<br>        a[i]+&#x3D;b[i];<br>        a[i+1]+&#x3D;a[i]&#x2F;10;<br>        a[i]%&#x3D;10;<br>      }<br>      len++;    &#x2F;&#x2F;下面是去掉最高位的0，然后输出。<br>      while((a[len]&#x3D;&#x3D;0)&amp;&amp;(len&gt;1)) len–;<br>      for(i&#x3D;len;i&gt;&#x3D;1;i–)<br>        cout&lt;&lt;a[i];<br>      return 0;<br>    }&#96;&#96;&#96; </p>
+<p>&#x2F;&#x2F;注意：两个数相加，结果的位数，应该比两个数中大的那个数多一位。</p>
 
                 
             </div>
