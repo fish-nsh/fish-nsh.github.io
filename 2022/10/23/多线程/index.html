@@ -5,12 +5,11 @@
 <head>
     <meta charset="utf-8">
     <meta name="keywords" content="JAVA多线程, 鱼干小站">
-    <meta name="description" content="Java多线程1.进程和线程
-进程是:一个应用程序（1个进程是一个软件）。
+    <meta name="description" content="Java多线程1.进程和线程进程是:一个应用程序（1个进程是一个软件）。
 线程是：一个进程中的执行场景/执行单元。
 注意：一个进程可以启动多个线程。
 例如一个java程序中的main函数就是一个程序的主线程，
-因此现在的一个java程序至">
+因此现在的一个java程序至少">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -401,8 +400,7 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="Java多线程"><a href="#Java多线程" class="headerlink" title="Java多线程"></a>Java多线程</h3><p><strong>1.进程和线程</strong></p>
-<pre><code>进程是:一个应用程序（1个进程是一个软件）。
+                <h3 id="Java多线程"><a href="#Java多线程" class="headerlink" title="Java多线程"></a>Java多线程</h3><h4 id="1-进程和线程"><a href="#1-进程和线程" class="headerlink" title="1.进程和线程"></a><strong>1.进程和线程</strong></h4><pre><code>进程是:一个应用程序（1个进程是一个软件）。
 线程是：一个进程中的执行场景/执行单元。
 注意：一个进程可以启动多个线程。
 例如一个java程序中的main函数就是一个程序的主线程，
@@ -412,9 +410,109 @@
 <p>   线程A和线程B，堆内存 和 方法区 内存共享。但是 栈内存 独立，一个线程一个栈。</p>
 <p>   因此可以通过多线程并发来提高效率。</p>
 <p>*使用了多线程机制之后，main方法结束，是不是有可能程序也不会结束？</p>
-<p><strong>2.真正的多线程并发</strong><br> 　　t1线程执行t1的。<br> 　　t2线程执行t2的。<br> 　　t1不会影响t2，t2也不会影响t1。这叫做真正的多线程并发。</p>
-<p><strong>3.线程对象的生命状态</strong><br>    1.新建状态<br>    2.就绪状态<br>    3.运行状态<br>    4.阻塞状态<br>    5.死亡状态</p>
-<p><img src="/images/%E8%BF%9B%E7%A8%8B%E4%BA%94%E7%8A%B6%E6%80%81.png" alt="进程五状态"></p>
+<h4 id="2-真正的多线程并发"><a href="#2-真正的多线程并发" class="headerlink" title="2.真正的多线程并发"></a><strong>2.真正的多线程并发</strong></h4><p> 　　t1线程执行t1的。<br> 　　t2线程执行t2的。<br> 　　t1不会影响t2，t2也不会影响t1。这叫做真正的多线程并发。</p>
+<h4 id="3-线程对象的生命状态"><a href="#3-线程对象的生命状态" class="headerlink" title="3.线程对象的生命状态"></a><strong>3.线程对象的生命状态</strong></h4><pre><code>1.新建状态  
+2.就绪状态  
+3.运行状态  
+4.阻塞状态  
+5.死亡状态
+</code></pre>
+<p><img src="/images/%E8%BF%9B%E7%A8%8B%E4%BA%94%E7%8A%B6%E6%80%81.png" alt="进程五状态">  </p>
+<h4 id="4-线程构造方法"><a href="#4-线程构造方法" class="headerlink" title="4.线程构造方法"></a><strong>4.线程构造方法</strong></h4><table>
+<thead>
+<tr>
+<th align="left">构造方法名</th>
+<th align="left">备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Thread();</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">Thread(String name)</td>
+<td align="left">name为线程名字</td>
+</tr>
+<tr>
+<td align="left">创建线程第二种方式</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">Thread(Runnable target)</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">Thread(Runnable target, String name)</td>
+<td align="left">name为线程名字</td>
+</tr>
+</tbody></table>
+<h4 id="5-线程的实现"><a href="#5-线程的实现" class="headerlink" title="5.线程的实现"></a><strong>5.线程的实现</strong></h4><h6 id="第一种方式："><a href="#第一种方式：" class="headerlink" title="第一种方式："></a>第一种方式：</h6><p>编写一个类，直接 继承 java.lang.Thread，重写 run方法。</p>
+<h6 id="第一种方式：-1"><a href="#第一种方式：-1" class="headerlink" title="第一种方式："></a>第一种方式：</h6><p>编写一个类，实现 java.lang.Runnable 接口，实现run方法。</p>
+<h4 id="6-重要方法"><a href="#6-重要方法" class="headerlink" title="6.重要方法"></a><strong>6.重要方法</strong></h4><table>
+<thead>
+<tr>
+<th align="left">函数</th>
+<th align="left">功能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">start()</td>
+<td align="left">启动线程</td>
+</tr>
+<tr>
+<td align="left">static void sleep(long millis)</td>
+<td align="left">使线程休眠millis毫秒</td>
+</tr>
+<tr>
+<td align="left">interrupt()</td>
+<td align="left">终止线程的睡眠</td>
+</tr>
+<tr>
+<td align="left">static Thread currentThread()</td>
+<td align="left">获取当前线程对象</td>
+</tr>
+<tr>
+<td align="left">String getName()</td>
+<td align="left">获取线程对象名字</td>
+</tr>
+<tr>
+<td align="left">void setName(String name)</td>
+<td align="left">修改线程对象名字</td>
+</tr>
+<tr>
+<td align="left">yield()</td>
+<td align="left">让位，当前线程暂停，回到就绪状态，让给其它线程</td>
+</tr>
+<tr>
+<td align="left">join()</td>
+<td align="left">将一个线程合并到当前线程中，当前线程受阻塞，加入的线程执行直到结束</td>
+</tr>
+</tbody></table>
+<h4 id="7-线程的结束"><a href="#7-线程的结束" class="headerlink" title="7.线程的结束"></a><strong>7.线程的结束</strong></h4><p>·过时：t.stop();	强制终止，容易丢失大量数据<br>·常用：r.run&#x3D;false;</p>
+<h4 id="8-线程的优先级"><a href="#8-线程的优先级" class="headerlink" title="8.线程的优先级"></a><strong>8.线程的优先级</strong></h4><p>static int MAX_PRIORITY			最高优先级（10）<br>static int MIN_PRIORITY			最低优先级（1）<br>static int NORM_PRIORITY		默认优先级（5）</p>
+<table>
+<thead>
+<tr>
+<th align="left">方法</th>
+<th align="left">功能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">int getPriority()</td>
+<td align="left">获得线程优先级</td>
+</tr>
+<tr>
+<td align="left">void setPriority(int newPriority)</td>
+<td align="left">设置线程优先级</td>
+</tr>
+</tbody></table>
+<h4 id="9-线程安全"><a href="#9-线程安全" class="headerlink" title="9.线程安全"></a><strong>9.线程安全</strong></h4><p>什么时候数据在多线程并发的环境下会存在安全问题呢？★★★★★<br>满足三个条件：<br>条件1：多线程并发。<br>条件2：有共享数据。<br>条件3：共享数据有修改的行为。<br>可以采用牺牲效率的方式让线程只能排队执行，也就是线程同步机制。</p>
+<h5 id="线程同步机制"><a href="#线程同步机制" class="headerlink" title="线程同步机制"></a>线程同步机制</h5><p>线程同步机制语法如下<br>synchronized( 要进行线程同步的线程共享的数据 ){<br> 　　&#x2F;&#x2F; 线程同步代码块。<br>} </p>
+<p>1、假设t1和t2线程并发，开始执行以下代码的时候，肯定有一个先一个后。<br>2、假设t1先执行了，遇到了synchronized，这个时候自动找“后面共享对象”的对象锁，<br>找到之后，并占有这把锁，然后执行同步代码块中的程序，在程序执行过程中一直都是<br>占有这把锁的。直到同步代码块代码结束，这把锁才会释放。<br>3、假设t1已经占有这把锁，此时t2也遇到synchronized关键字，也会去占有后面<br>共享对象的这把锁，结果这把锁被t1占有，t2只能在同步代码块外面等待t1的结束，<br>直到t1把同步代码块执行结束了，t1会归还这把锁，此时t2终于等到这把锁，然后<br>t2占有这把锁之后，进入同步代码块执行程序。<br>4、这样就达到了线程排队执行。</p>
+<h4 id="10-Java中有三大变量？"><a href="#10-Java中有三大变量？" class="headerlink" title="10.Java中有三大变量？"></a><strong>10.Java中有三大变量？</strong></h4><p>1.实例变量：在堆中。<br>2.静态变量：在方法区。<br>3.局部变量：在栈中。<br>以上三大变量中：<br>局部变量永远都不会存在线程安全问题。<br>因为局部变量不共享。（一个线程一个栈。）<br>局部变量在栈中。所以局部变量永远都不会共享。  </p>
+<p>实例变量在堆中，堆只有1个。<br>静态变量在方法区中，方法区只有1个。<br>堆和方法区都是多线程共享的，所以可能存在线程安全问题。  </p>
+<p>总结：<br>·局部变量+常量：不会有线程安全问题。<br>·成员变量（实例+静态）：可能会有线程安全问题。</p>
+<h4 id="11-死锁"><a href="#11-死锁" class="headerlink" title="11.死锁"></a><strong>11.死锁</strong></h4><h4 id="12-守护线程"><a href="#12-守护线程" class="headerlink" title="12.守护线程"></a><strong>12.守护线程</strong></h4><h4 id="13-定时器"><a href="#13-定时器" class="headerlink" title="13.定时器"></a><strong>13.定时器</strong></h4><p>间隔特定的时间，执行特定的程序。</p>
 
                 
             </div>
