@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="JSON学习, 鱼干小站">
-    <meta name="description" content="JSON1.JSON是什么？·JSON，全称是 JavaScript Object Notation，即 JavaScript对象标记法。·JSON是一种轻量级（Light-Meight)、基于文本的(Text-Based)、可读的(Hum">
+    <meta name="keywords" content="QWidget和QMainWindow, 鱼干小站">
+    <meta name="description" content="QWidget类是所有用户界面对象的基类。QMainWindow类提供一个有菜单条、工具栏、状态条的主应用程序窗口（例如：开发Qt常用的IDE-Visual Studio、Qt Creator等）。可以直接在QWidget类对象中添加对象并">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>JSON学习 | 鱼干小站</title>
+    <title>QWidget和QMainWindow | 鱼干小站</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -334,12 +334,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/22.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/5.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">JSON学习</h1>
+                    <h1 class="description center-align post-title">QWidget和QMainWindow</h1>
                 </div>
             </div>
         </div>
@@ -375,7 +375,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-10-24
+                    2022-10-25
                 </div>
                 
 
@@ -396,12 +396,7 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="JSON"><a href="#JSON" class="headerlink" title="JSON"></a>JSON</h2><h4 id="1-JSON是什么？"><a href="#1-JSON是什么？" class="headerlink" title="1.JSON是什么？"></a><strong>1.JSON是什么？</strong></h4><p>·JSON，全称是 JavaScript Object Notation，即 JavaScript对象标记法。<br>·JSON是一种轻量级（Light-Meight)、基于文本的(Text-Based)、可读的(Human-Readable)格式，JSON是一种数据格式，而不是一种编程语言。<br>·JSON 的名称中虽然带有JavaScript，但这是指其语法规则是参考JavaScript对象的，而不是指只能用于JavaScript 语言。<br>·JSON无论对于人，还是对于机器来说，都是十分便于阅读和书写的，而且相比 XML(另一种常见的数据交换格式)，文件更小，因此迅速成为网络上十分流行的交换格式。  </p>
-<h4 id="2-JSON-的语法规则是怎样的？"><a href="#2-JSON-的语法规则是怎样的？" class="headerlink" title="2. JSON 的语法规则是怎样的？"></a><strong>2. JSON 的语法规则是怎样的？</strong></h4><p>数组（Array）用方括号(“[]”)表示。<br>对象（0bject）用大括号(“{}”)表示。<br>名称&#x2F;值对(name&#x2F;value）组合成数组和对象。<br>名称(name）置于双引号中，值（value）有字符串、数值、布尔值、null、对象和数组。<br>并列的数据之间用逗号(“,”）分隔。<br>形如：</p>
-<p>{<br>    “name”:”兮动人”,<br>    “age”:22,<br>    “fruits”:[“apple”,”pear”,”grape”]<br>}</p>
-<p>JSON字符串 to JS对象：JSON.parse(str)<br>JS对象 to JSON字符串：JSON.stringify()</p>
-<h4 id="3-JSON格式规定"><a href="#3-JSON格式规定" class="headerlink" title="3.JSON格式规定"></a><strong>3.JSON格式规定</strong></h4><p><strong>1、对象（0bject)</strong><br>对象用大括号(“{}”）括起来，大括号里是一系列的“名称&#x2F;值对”。<br>两个并列的数据之间用逗号(“,”）隔开，注意两点:<br>使用英文的逗号（“,”)，不要用中文的逗号(“，”)<br>最后一个“名称&#x2F;值对“之后不要加逗号<br>{<br>    “key”:”value”,<br>    “key1”:”value”,<br>   “num”:100<br>}<br><strong>2、数组（Array）</strong><br>数组表示一系列有序的值，用方括号(“[]”)包围起来，并列的值之间用逗号分隔。<br>例如，以下的数组是合法的:<br>[1,2,”three”,”four”,true,false,null,[1,2],{“name”:”兮动人”}]<br><strong>3、名称&#x2F;值对（Name&#x2F;Value）</strong><br>名称（Name）是一个字符串，要用双引号括起来，不能用单引号，也不能没有引号，这一点与JavaScript不同。<br>值的类型只有七种:字符串（string)、数值(number)、对象（object)、数组（array), true、false、null。不能有这之外的类型。<br>字符串（string）的规则如下:<br>英文双引号括起来,不能用单引号，也不能没有。<br>字符串中不能单独出现双引号（”）和右斜杠（“&quot;)。<br>如果要打双引号或右斜杠，需要使用“右斜杠+字符”的形式，例如\”和\。<br>·转义字符<br>{<br>“string”:”\ &quot; “<br>}<br>·数值类型，可以使用科学计数法表示<br>{<br>“number”:1e3,<br>“n1”:1e2,<br>“n2”:-100<br>}</p>
-<h4 id="4-java中对JSON文件的操作"><a href="#4-java中对JSON文件的操作" class="headerlink" title="4.java中对JSON文件的操作"></a><strong>4.java中对JSON文件的操作</strong></h4><p>Java中对JSON文件的操作可以通过org.json包中的函数来实现。<br>第一步：通过FileReader读取json文件。<br>第二步：使用BufferReader，先通过I&#x2F;O读取一定大小的数据缓存到数组中，然后再从数组取出数据。<br>第三步：用一个字符串把每次传来的数据处理后写到新的文件中。重复这个过程。  </p>
+                <p>QWidget类是所有用户界面对象的基类。<br>QMainWindow类提供一个有菜单条、工具栏、状态条的主应用程序窗口（例如：开发Qt常用的IDE-Visual Studio、Qt Creator等）。<br>可以直接在QWidget类对象中添加对象并显示，而在对QMainWindow对象中添加对象时，要先在QMainWindow对象中添加一个QWidget对象并且将其显示，要添加的控件都要添加在QWidget对象中。<br>不然直接添加在QMainWindow对象中会无法显示。</p>
 
                 
             </div>
@@ -428,7 +423,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://fish-nsh.github.io/2022/10/24/Json%E5%AD%A6%E4%B9%A0/">http://fish-nsh.github.io/2022/10/24/Json%E5%AD%A6%E4%B9%A0/</a>
+                    <a href="http://fish-nsh.github.io/2022/10/25/QWidget%E5%92%8CQMainWindow/">http://fish-nsh.github.io/2022/10/25/QWidget%E5%92%8CQMainWindow/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -546,13 +541,13 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2022/10/25/QWidget%E5%92%8CQMainWindow/">
+                <a href="/2022/10/26/DLL/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="QWidget和QMainWindow">
+                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="DLL">
                         
-                        <span class="card-title">QWidget和QMainWindow</span>
+                        <span class="card-title">DLL</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -563,7 +558,7 @@
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-10-25
+                            <i class="far fa-clock fa-fw icon-date"></i>2022-10-26
                         </span>
                         <span class="publish-author">
                             
@@ -583,13 +578,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2022/10/23/%E5%A4%9A%E7%BA%BF%E7%A8%8B/">
+                <a href="/2022/10/24/Json%E5%AD%A6%E4%B9%A0/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="JAVA多线程">
+                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="JSON学习">
                         
-                        <span class="card-title">JAVA多线程</span>
+                        <span class="card-title">JSON学习</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -600,7 +595,7 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-10-23
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-10-24
                             </span>
                         <span class="publish-author">
                             
